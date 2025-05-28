@@ -1,0 +1,137 @@
+.sidebar {
+  width: 250px;
+  background: #f7f7f7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1001;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+.close-sidebar {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333333;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header .logo {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.sidebar-header .logo .health {
+  color: rgb(156, 156, 184);
+}
+
+.sidebar-header .logo .care {
+  color: rgb(111, 111, 239);
+}
+
+/* sidebar-sections CSS */
+.sidebar-sections {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-section-title {
+  opacity: 0.6;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: grey;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav-item.active {
+  color: #3a86ff;
+}
+
+.sidebar-nav-item:hover {
+  opacity: 0.8;
+}
+
+.sidebar-nav-item i {
+  width: 1.5rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.sidebar-section:last-child {
+  margin-top: auto;
+  padding-bottom: 1.5rem;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+
+  .close-sidebar {
+    display: none;
+  }
+}

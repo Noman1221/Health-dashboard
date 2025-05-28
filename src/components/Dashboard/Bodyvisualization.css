@@ -1,0 +1,168 @@
+.body-content {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.body-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.body-header h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #3a86ff;
+}
+
+.weeks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.weeks p {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.weeks i {
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.Body-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.body-visualizer-container {
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.fa-magnifying-glass-plus {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  color: #777;
+  cursor: pointer;
+}
+
+.human-body {
+  width: 50%;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.human-body img {
+  width: 100%;
+  height: auto;
+}
+
+.body-labels {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.label-heart {
+  position: absolute;
+  background-color: #3a86ff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.8rem;
+  top: 30%;
+  right: 10%;
+  white-space: nowrap;
+}
+
+.label-leg {
+  position: absolute;
+  background-color: #68d391;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.8rem;
+  bottom: 33%;
+  left: 15%;
+  white-space: nowrap;
+}
+
+.Lungs-teeth-bone {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .body-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .Body-container {
+    flex-direction: row;
+  }
+
+  .body-visualizer-container {
+    width: 60%;
+    min-height: 350px;
+  }
+
+  .Lungs-teeth-bone {
+    width: 40%;
+    padding-left: 1.5rem;
+  }
+
+  .label-heart {
+    font-size: 0.9rem;
+    right: 10%;
+  }
+
+  .label-leg {
+    font-size: 0.9rem;
+    left: 10%;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  .body-header h1 {
+    font-size: 2rem;
+  }
+
+  .body-visualizer-container {
+    min-height: 400px;
+  }
+
+  .human-body {
+    max-width: 250px;
+  }
+
+  .label-heart,
+  .label-leg {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

@@ -1,0 +1,88 @@
+.organ-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.Organ {
+  flex: 1;
+  min-width: calc(50% - 0.5rem);
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.OrganHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.OrganIcon {
+  font-size: 1.8rem;
+}
+
+.OrganHeader p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.Date {
+  color: #666;
+  opacity: 0.8;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.organ-progress-container {
+  position: relative;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.organ-progress-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .organ-container {
+    flex-direction: column;
+  }
+
+  .Organ {
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .Organ {
+    padding: 1.2rem;
+  }
+
+  .OrganHeader p {
+    font-size: 1.3rem;
+  }
+
+  .OrganIcon {
+    font-size: 2rem;
+  }
+
+  .Date {
+    font-size: 0.9rem;
+  }
+
+  .organ-progress-container {
+    height: 8px;
+  }
+}
